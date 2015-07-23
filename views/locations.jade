@@ -1,0 +1,7 @@
+extends layout
+
+block content
+	h1 Magellan's Voyage!
+	h2 Welcome to #{location.name}!
+	a(href="/locations/#{location.next}") Next Stop
+	p #{location.next}

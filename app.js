@@ -10,25 +10,54 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/', indexController.index);
 
-app.get('/canary-islands', function(req, res){
-	res.render('canary-islands');
-});
+app.get('/locations/:slug', indexController.locationPage);
 
-app.get('/cape-verde', function(req, res){
-	res.render('cape-verde');
-});
 
-app.get('/strait-of-magellan', function(req, res){
-	res.render('strait-of-magellan');
-});
 
-app.get('/guam', function(req, res){
-	res.render('guam');
-});
 
-app.get('/phillipines', function(req, res){
-	res.render('phillipines');
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// app.get('/canary-islands', function(req, res){
+// 	res.render('canary-islands');
+// });
+
+// app.get('/cape-verde', function(req, res){
+// 	res.render('cape-verde');
+// });
+
+// app.get('/strait-of-magellan', function(req, res){
+// 	res.render('strait-of-magellan');
+// });
+
+// app.get('/guam', function(req, res){
+// 	res.render('guam');
+// });
+
+// app.get('/phillipines', function(req, res){
+// 	res.render('phillipines');
+// });
 
 var server = app.listen(8431, function() {
 	console.log('Express server listening on port ' + server.address().port);
