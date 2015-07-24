@@ -39,6 +39,7 @@ app.get('/locations/:slug', indexController.locationPage);
 
 
 
+
 // app.get('/canary-islands', function(req, res){
 // 	res.render('canary-islands');
 // });

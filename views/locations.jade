@@ -2,6 +2,15 @@ extends layout
 
 block content
 	h1 Magellan's Voyage!
-	h2 Welcome to #{location.name}!
-	a(href="/locations/#{location.next}") Next Stop
-	p #{location.next}
+
+	if location.name === 'Philippines'
+		h2 Welcome to #{location.name}!
+		p This is the last stop!
+
+	else if location.name
+		h2 Welcome to #{location.name}!
+		a(href="/locations/#{location.slugNext}") Next Stop
+		p #{location.next}
+
+	else 
+		p Magellan did not travel Here.

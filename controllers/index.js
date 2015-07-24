@@ -8,8 +8,10 @@ var indexController = {
 	locationPage : function(req, res){
 		var locationSlug = req.params.slug;
 		var foundStop = location.findStop(locationSlug);
-
+		
 		res.render('locations', {location : foundStop});
+
+
 	}
 };
 
