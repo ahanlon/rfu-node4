@@ -3,16 +3,16 @@ extends layout
 block content
 	h1 Magellan's Voyage!
 
-	if location.name === 'Philippines'
+	if !location
+		p Magellan did not travel Here.
+
+	else if location.name === 'Philippines'
 		h2 Welcome to #{location.name}!
 		p This is the last stop!
 		img(src=location.image)
 
 	else if location.name
 		h2 Welcome to #{location.name}!
-		a(href="/locations/#{location.slugNext}") Next Stop
-		p #{location.next}
+		a(href="/locations/#{location.slugNext}") Next Stop #{location.next}
+		p
 		img(src=location.image)
-
-	else 
-		p Magellan did not travel Here.
