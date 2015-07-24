@@ -6,11 +6,13 @@ block content
 	if location.name === 'Philippines'
 		h2 Welcome to #{location.name}!
 		p This is the last stop!
+		img(src=location.image)
 
 	else if location.name
 		h2 Welcome to #{location.name}!
 		a(href="/locations/#{location.slugNext}") Next Stop
 		p #{location.next}
+		img(src=location.image)
 
 	else 
 		p Magellan did not travel Here.

@@ -15,30 +15,7 @@ app.get('/locations/:slug', indexController.locationPage);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// --------------- THis was the long way of handling each page ----------------
 
 // app.get('/canary-islands', function(req, res){
 // 	res.render('canary-islands');
